@@ -30,15 +30,24 @@ const drawSnake = () => {
     });
 }
 
+const fruitImage = new Image();
+fruitImage.src = 'assets/images/fruit.png';
+
 const drawFruit = () => {
-    const { x, y, color } = fruit;
-    ctx.fillStyle = color;
-    ctx.fillRect(x, y, scale, scale);
-}
+    const { x, y } = fruit;
+    if (fruitImage.complete) {
+        ctx.drawImage(fruitImage, x, y, scale, scale);
+    } else {
+        fruitImage.onload = () => {
+            ctx.drawImage(fruitImage, x, y, scale, scale);
+        };
+    }
+};
 
 const incrementScore = () => {
     value.innerText = parseInt(value.innerText) + 10;
 }
+
 
 const moveSnake = () => {
     if (!direction) return; 
