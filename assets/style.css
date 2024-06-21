@@ -10,7 +10,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #000;
-    color: #fff; /* Cor padrão para o texto */
+    color: #fff; 
 }
 
 canvas {
@@ -25,7 +25,7 @@ canvas {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 3; /* Coloca o aviso sobre o canvas */
+            z-index: 3; 
             background-color: rgba(255, 255, 255, 0.5);
             padding: 20%;
             border-radius: 5px;
@@ -47,7 +47,7 @@ canvas {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto transparente */
+    background-color: rgba(0, 0, 0, 0.8); 
     padding: 15%;
     width: 120%;
     border: 2px solid #fff;
@@ -57,14 +57,14 @@ canvas {
 }
 
 #gameOverScreen h1 {
-    color: red; /* Cor do título */
+    color: red; 
     font-size: 40px;
     margin-bottom: 20px;
 }
 
 #restartButton {
-    background-color: #4CAF50; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
+    background-color: #4CAF50; 
+    color: white; 
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -77,8 +77,8 @@ canvas {
 }
 
 #startButton {
-    background-color: blue; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
+    background-color: blue; 
+    color: white; 
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -91,7 +91,7 @@ canvas {
 }
 
 #restartButton:hover {
-    background-color: #45a049; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #45a049; 
 }
 
 #joystickContainer {
