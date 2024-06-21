@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff; /* Cor padrão para o texto */
+}
+
+canvas {
+    border: 1px solid #fff;
+}
+
+#aviso {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3; /* Coloca o aviso sobre o canvas */
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20%;
+            border-radius: 5px;
+            width: 120%;
+            color: black;
+}
+
+#gameContainer {
+  
+    position: relative;
+    background-color: black;
+    
+}
+
+#gameOverScreen {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto transparente */
+    padding: 15%;
+    width: 120%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#gameOverScreen h1 {
+    color: red; /* Cor do título */
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#restartButton {
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#startButton {
+    background-color: blue; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#restartButton:hover {
+    background-color: #45a049; /* Cor de fundo do botão ao passar o mouse */
+}
+
+#joystickContainer {
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+}
+
+#joystickBase {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+#joystickHandle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    top: 25px;
+    left: 25px;
+}
+
+@media (max-width: 798px) {
+    #joystickContainer {
+        display: block;
+    }
+
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
+
+    

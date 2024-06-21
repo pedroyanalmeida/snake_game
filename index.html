@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div id="scoreContainer" style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%); z-index: 1; justify-content: center;">
+        <h1 style="color: #fff; font-size: 24px;">Score: <span id="scoreValue">0</span></h1>
+       
+    </div>
+    <div id="gameContainer" style="position: relative; ">
+        <div id="aviso">
+            <h1>Instruções</h1>
+
+            <ul>
+            <li><p>Você pode usar para movimento W, A, S, D</p></li>
+            <li><p>Outra opção é usar as setas do teclado</p></li>
+            <li> <p>Caso esteja em um smartphone ou tablet é possível usar joystick</p> </li>
+            </ul>
+           
+            <button id="startButton" style="margin-top: 20px;">Start</button>
+            
+        </div>
+        <canvas id="gameCanvas" width="320" height="320"></canvas>
+        <div id="gameOverScreen" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; background-color: black;">
+            <h1 style="color: red; font-size: 40px;">Game Over</h1>
+            <h2 style="font-size: 30px;">Your score:<span id="result"></span></h2>
+            <button id="restartButton" style="margin-top: 20px;">Restart</button>
+        </div>
+    </div>
+    <div id="joystickContainer" style="display: none;">
+        <div id="joystickBase">
+            <div id="joystickHandle"></div>
+        </div>
+    </div>
+    
+
+    <p style="position: absolute; top: 81% ">Made by: Pedro Yan</p>
+    
+    <script src="https://unpkg.com/nipplejs"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
