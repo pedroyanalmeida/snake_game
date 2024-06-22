@@ -118,23 +118,22 @@ const moveSnake = () => {
 };
 
 const randomPosition = () => {
-    
-    let newX = Math.floor(Math.random() * columns) * scale;
-    let newY = Math.floor(Math.random() * rows) * scale;
+    let newX, newY;
+    let collision;
 
-    
-    for (let segment of snake) {
-        if (newX === segment.x && newY === segment.y) {
-           
-            randomPosition();
-            return;
-        }
-    }
+    do {
+        newX = Math.floor(Math.random() * columns) * scale;
+        newY = Math.floor(Math.random() * rows) * scale;
 
-    
+        // Verifica se a nova posição da fruta colide com qualquer parte do corpo da cobra
+        collision = snake.some(segment => segment.x === newX && segment.y === newY);
+    } while (collision);
+
     fruit.x = newX;
     fruit.y = newY;
 };
+
+
 
 const drawGrid = () => {
     ctx.save(); 
